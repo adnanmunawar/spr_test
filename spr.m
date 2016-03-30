@@ -20,8 +20,9 @@ x = 4.5;
 y = 2;
 [xout, yout] =intersections(hor,body1,x+xp,y+yp,1);
 h2 = plot(x+xp,y+yp);
-h3 = plot([x x],[1 2]);
+h3 = plot([x x],[1 2],'Color','g');
 h4 = plot(xout,yout,'r.','markersize',18);
+h5 = plot([xout(1) x x xout(2)],[yout(1) yout(1) yout(2) yout(2)],'Color','m');
 for j=1:5   
 x = 4.5;
 y = 2;
@@ -29,11 +30,13 @@ for i=1:itr
 delete(h2);
 delete(h3);
 delete(h4);
+delete(h5);
 x=x+(1/itr);
 [xout, yout] =intersections(hor,body1,x+xp,y+yp,1)
 h2 = plot(x+xp,y+yp);
-h3 = plot([x x],[1 2]);
+h3 = plot([x x],[1 2],'Color','g');
 h4 = plot(xout,yout,'r.','markersize',18);
+h5 = plot([xout(1) x x xout(2)],[yout(1) yout(1) yout(2) yout(2)],'Color','m');
 %viscircles([x y], r,'Color','b');
 pause(0.02);
 end
@@ -42,11 +45,13 @@ for i=itr:-1:1
 delete(h2);
 delete(h3);
 delete(h4);
+delete(h5);
 x=x-(1/itr);
 [xout, yout] =intersections(hor,body1,x+xp,y+yp,1);
 h2 = plot(x+xp,y+yp);
-h3 = plot([x x],[1 2]);
+h3 = plot([x x],[1 2],'Color','g');
 h4 = plot(xout,yout,'r.','markersize',18);
+h5 = plot([xout(1) x x xout(2)],[yout(1) yout(1) yout(2) yout(2)],'Color','m');
 %viscircles([x y], r,'Color','b');
 pause(0.02);
 end
