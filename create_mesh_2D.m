@@ -1,7 +1,7 @@
 function[x_mesh, y_mesh] = create_mesh_2D(itr)
 level = 2;
 intercept = -3;
-if level <= 0
+if intercept <= 0
     y_mesh = linspace(level-(2/(itr/2)),intercept,(itr/2));
 else
     y_mesh = linspace(level+(2/(itr/2)),intercept,(itr/2));
