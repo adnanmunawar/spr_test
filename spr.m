@@ -1,3 +1,6 @@
+%% Author: Adnan Munawar
+% AIM Lab, WPI, USA
+% Email: amunawar@wpi.edu
 clc;
 close all;
 clear all;
