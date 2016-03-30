@@ -7,7 +7,7 @@ clear all;
 global startx starty
 itr = 100;
 startx = 4.5;
-starty = 2.5;
+starty = 2;
 [x_mesh, y_mesh] = create_mesh_2D(itr);
 plot(x_mesh,y_mesh,'Color','green');
 axis equal
