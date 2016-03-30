@@ -6,6 +6,7 @@ h3 = plot([x x],[y-1 y+1],'--black');
 h4 = plot(xout,yout,'r.','markersize',18);
 xtemp = zeros(numel(xout),2);
 ytemp = zeros(numel(yout),2);
+if (numel(xout)>=1)
 for i=1:numel(xout)
     xtemp(i,:) = [xout(i) x];
     ytemp(i,:) = [yout(i) y];
@@ -16,4 +17,5 @@ x_proj = reshape(xtemp,[1,numel(xtemp)]);
 y_proj = reshape(ytemp,[1,numel(ytemp)]);
 h5 = plot([xout(1) x x xout(2)],[yout(1) yout(1) yout(2) yout(2)],'Color','m');
 h6 = plot(x_radi,y_radi,'-black');
+end
 end
