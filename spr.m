@@ -6,10 +6,10 @@ close all;
 clear all;
 global startx starty
 itr = 100;
-startx = 4.5;
-starty = 2;
+startx = 4;
+starty = 2.5;
 [x_mesh, y_mesh] = create_mesh_2D(itr);
-plot(x_mesh,y_mesh,'Color','green');
+plot(x_mesh,y_mesh,'Color','green','LineWidth',2);
 axis equal
 grid on;
 hold on;
