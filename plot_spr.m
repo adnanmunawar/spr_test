@@ -15,7 +15,11 @@ x_radi = reshape(xtemp.',[1,numel(xtemp)]);
 y_radi = reshape(ytemp.',[1,numel(ytemp)]);
 x_proj = reshape(xtemp,[1,numel(xtemp)]);
 y_proj = reshape(ytemp,[1,numel(ytemp)]);
-h5 = plot([xout(1) x x xout(2)],[yout(1) yout(1) yout(2) yout(2)],'Color','m');
+if (numel(xout)==1)
+    h5 = plot([xout(1) x],[yout(1) yout(1)],'Color','m');
+else
+    h5 = plot([xout(1) x x xout(2)],[yout(1) yout(1) yout(2) yout(2)],'Color','m');
+end
 h6 = plot(x_radi,y_radi,'-black');
 end
 end

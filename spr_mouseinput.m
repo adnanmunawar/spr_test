@@ -9,6 +9,7 @@ startx = 4;
 starty = 3;
 [x_mesh, y_mesh] = create_mesh_2D(2,0,itr);
 plot(x_mesh,y_mesh,'Color','green','LineWidth',2);
+axis([0 10 -3 7]);
 axis equal
 grid on;
 hold on;
@@ -22,6 +23,18 @@ for j=1:1000
 C = mouseMove;
 x = C(1,1);
 y = C(1,2);
+
+if x > 30
+    x = 30;
+elseif x < -30
+    x = -30;
+end
+if y > 20
+    y = 20;
+elseif x < -20
+    y = -20;
+end
+
 clear_spr_plot;
 [xout, yout] = intersections(x_mesh,y_mesh,x+x_spr,y+y_spr,1);
 plot_spr(x,x_spr,y,y_spr,xout,yout);
