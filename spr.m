@@ -4,12 +4,11 @@
 clc;
 close all;
 clear all;
-global h1 h2 h3 h4 h5;
 itr = 100;
 body1 = linspace(2-(2/(itr/2)),0,(itr/2));
 body1 = [ones(1,(itr/2))*2,body1];
 hor = linspace(1,10,itr);
-plot(hor,body1)
+plot(hor,body1,'Color','green')
 axis equal
 
 hold on;
@@ -20,14 +19,14 @@ yp=r*sin(ang);
 x = 4.5;
 y = 2;
 [xout, yout] =intersections(hor,body1,x+xp,y+yp,1);
-plot_spr(x,xp,y,yp,xout,yout)
+plot_spr(x,xp,y,yp,xout,yout);
 for j=1:5   
 x = 4.5;
 y = 2;
 for i=1:itr
 clear_spr_plot;
 x=x+(1/itr);
-[xout, yout] =intersections(hor,body1,x+xp,y+yp,1)
+[xout, yout] = intersections(hor,body1,x+xp,y+yp,1);
 plot_spr(x,xp,y,yp,xout,yout)
 pause(0.02);
 end
